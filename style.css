@@ -1,4 +1,100 @@
-main{
-    background-color: #f0f1f3;
-    padding: 8Px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Source San Pro';
+    scroll-behavior: smooth;
+    border: none;
+    border: 0;
+    list-style: none;
 }
+:root{
+    --nav-left-background:#0c1526;
+    --nav-left-border:#e0e2e7;
+    --nav-left-footer:#1d2646;
+}
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+main{
+    padding: 0.8rem;
+    display: flex;
+    color: #f0f1f3;
+}   
+#app-left-Var{  
+flex-basis: 17.5%;
+height: 98vh;
+background-color:var(--nav-left-background);
+padding: 0.8rem 1.2rem;
+border-radius: 0.8rem;
+font-size: 1.4rem;
+}
+.company-details{   
+    display: flex;
+    padding: 0.5rem 0.4rem;
+    cursor: pointer;
+}
+.company-details:hover{
+    background-color: #676768;
+    opacity: 1;
+    border-radius: 0.6rem;
+}   
+.company-sub-content{
+    padding-inline: 0.8rem;
+}
+.company-name{
+    width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Company-logo{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+.company-number{
+    color: #858d9d;
+    font-weight: 100;
+}
+.company-name-tooltip-wrapper{
+    position: relative;
+    display: inline-block;
+}
+.tooltip{
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    width: 28rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 50%;
+    left: 117%;
+    background-color:#2c2e33;
+    color: #f0f1f3;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+    border-radius: 0.4rem;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    border-width: 0.6rem;
+    border-style: solid;
+    transform: translateY(-50%);
+    border-color: transparent #2c2e33 transparent transparent;
+    border: 0.6rem solid transparent #2c2e33 transparent transparent ;
+}
+.company-name-tooltip-wrapper:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.general{
+    border-top: 0.1rem solid #858d9d ;
+    margin-top: 1rem;
+}
+
