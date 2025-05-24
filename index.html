@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventory & Billing System</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome icons link  -->
+   <script src="https://kit.fontawesome.com/6346891d99.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <main>
@@ -22,10 +24,30 @@
          
         </div>
       </div>  
-      <div class="general">
+      <div class="create-sale-dropdown hover" id="Sales-dropdown">
+        <div class="icons-wraper">
+          <i class="fa-solid fa-plus"></i>
+          <p>Create Sales Invoice</p>
+        </div>
+        <!-- <img src="./Images/Down-arrow.svg" width="35px" height="28px" id="drop-arrow" class="d-a"> -->
+         <svg width="35" height="28" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" id="drop-arrow" class="d-a">
+    <path d="M17 10.5L12.5 15L8 10.5" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+    </div>
+    <div class="general">
+      <h3>GENERAL</h3>
+      <ul>
+        <li><i class="fa-solid fa-table-columns"></i>Dashboard</li>
+        <li>Parties</li>
+        <li>Items</li>
+        <li>Sales</li>
+        <li>Purchases</li>
+        <li>Reports</li>
+      </ul>
     </div>
     </div>
     <div class="content-body"></div>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
