@@ -51,7 +51,7 @@ font-size: 1.4rem;
 }
 .Company-logo{
     border-radius: 50%;
-    width: 3rem;
+    width: 3rem;    
     height: 3rem;
 }
 .company-number{
@@ -93,8 +93,40 @@ font-size: 1.4rem;
     visibility: visible;
     opacity: 1;
 }
-.general{
-    border-top: 0.1rem solid #7c8392 ;
+.create-sale-dropdown{
+    display: flex;
+    background-color: #dbd8f5;
+    border-radius: 5rem;
+    overflow: hidden;
     margin-top: 1rem;
+    color: #212529;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
+.icons-wraper{
+    display: flex;
+    padding: 0.6rem 2.9rem;
 
+}
+.create-sale-dropdown .fa-plus{
+    padding-right: 0.8rem;
+}
+.create-sale-dropdown i{
+    font-size: 1.2rem;
+}
+.create-sale-dropdown p{
+    font-size: 1.2rem;
+}
+.create-sale-dropdown .d-a{
+    background-color: #f1f0fc; 
+}
+.hover:hover{
+    background-color: #c3bdfa;
+}   
+.no-hover:hover{
+    background-color: #dbd8f5;  
+}
+.drop-down-onclick{ 
+    background-color: #c3bdfa;
+}
