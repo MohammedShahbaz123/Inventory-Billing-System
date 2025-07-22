@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Times New Roman', Times, serif;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     border: none;
     border: 0;
     list-style: none;
@@ -15,7 +15,6 @@
 }
 html{
     font-size: 62.5%;
-    overflow: hidden;
 }
 main{
     padding: 0.8rem;
@@ -25,17 +24,19 @@ main{
 #app-left-Var{  
 flex-basis: 17.5%;
 height: 98vh;
+display: flex;
+flex-direction: column;
 background-color:var(--nav-left-background);
-padding: 0.8rem 1.2rem;
 border-radius: 0.8rem;
 font-size: 1.4rem;
 }
 .logo-sale-create-wraper{
     padding-bottom: 1.2rem;
+    flex-shrink: 0;
+    padding: 0.8rem 1.2rem;
 }
 .company-details{   
     display: flex;
-    padding: 0.5rem 0.4rem;
     cursor: pointer;
      width: 100%;
      justify-content: space-between;
@@ -47,7 +48,7 @@ font-size: 1.4rem;
     border-radius: 0.6rem;
 }   
 .company-sub-content{
-    padding-inline: 0.8rem;
+     padding: 0.4rem 0.8rem 0rem 0.4rem;
 }
 .company-name{
     width:13rem;
@@ -60,6 +61,7 @@ font-size: 1.4rem;
     border-radius: 50%;
     width: 3rem;    
     height: 3rem;
+    margin-left: 0.3rem;
 }
 .company-number{
     color: #858d9d;
@@ -78,7 +80,7 @@ font-size: 1.4rem;
     padding: 0.5rem 0;
     position: absolute;
     top: 50%;
-    left: 135%;
+    left: 142%;
     background-color:#2c2e33;
     color: #f0f1f3;
     z-index: 1;
@@ -117,17 +119,22 @@ font-size: 1.4rem;
     padding: 0.6rem 2.9rem;
 
 }
-.create-sale-dropdown .fa-plus{
-    padding-right: 0.8rem;
-}
-.create-sale-dropdown i{
-    font-size: 1.2rem;
+.create-sale-dropdown svg{
+    margin-right: 0.8rem;
 }
 .create-sale-dropdown p{
     font-size: 1.2rem;
 }
 .create-sale-dropdown .d-a{
     background-color: #f1f0fc; 
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    color: #212529;
+}
+.create-sale-dropdown .fa-angle-down{
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    color: #212529;
 }
 .hover:hover{
     background-color: #c3bdfa;
@@ -140,12 +147,28 @@ font-size: 1.4rem;
 }
 .setting-svg{
     visibility: hidden;
-    padding-right: 1rem;
+    width:4rem;
+    height:4.3rem;
+    background-color: #3d4350;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 0 0.8rem 0.8rem 0;
 }
 .company-details:hover .setting-svg{
     visibility:visible;
 }
-.general h3,.Accounting-Solutions h3{
+.menu-list{
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: thin;
+    scrollbar-color: #888 var(--nav-left-background);
+    scrollbar-arrow-color: var(--nav-left-background);
+}
+.general,.Accounting-Solutions,.business-tool,.footer{
+    padding: 0.8rem 0.5rem 0rem 1.2rem;
+}
+.general h3,.Accounting-Solutions h3,.business-tool h3{
     font-size: 1rem;
     color: #c2c6ce;
     font-family: 'Poppins';
@@ -156,26 +179,48 @@ font-size: 1.4rem;
     color: #e0e2e7;
     border-radius: 3.5rem;
 }
-.general li,.Accounting-Solutions li{
+.general li,.Accounting-Solutions li,.business-tool li,.footer li{
     padding: 0.8rem 1.2rem;
     font-size: 1.4rem;
     color: #a3a9b6;
     margin-block: 0.5rem;
     position: relative;
 }
-.general li:hover,.Accounting-Solutions li:hover{
+.general li:hover,.Accounting-Solutions li:hover,.business-tool li:hover{
     background-color: #1f2530;
     border-radius: 3.5rem;
     cursor: pointer;
 }   
-.general li i{
+.general li i,.Accounting-Solutions li i{
     margin-right: 1rem;
 }
-.general li svg{
+.general li svg,.Accounting-Solutions li svg,.footer li svg,.business-tool li svg{
     margin-right: 1rem;
+    align-self: center;
 }
 .fa-angle-right{
    position: absolute;
    left: 88%;
    align-self: center;
 }
+.footer{
+    background-color: #1d2646;
+    padding: 0.2rem 1rem 2rem 1rem;
+    border-radius: 0rem 0rem 0.8rem 0.8rem;
+}
+.footer li{
+    margin-bottom: 2rem;
+    align-items:center;
+}
+.footer li:hover{
+    background-color: var(--nav-left-background);       
+    border-radius: 3rem;
+    cursor: pointer;
+}
+.footer img{
+    padding:0.5rem 2rem;
+}
+.business-tool{
+    padding-bottom: 1rem;
+}
+
