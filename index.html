@@ -11,17 +11,16 @@
 <body>
   <main>
     <div id="app-left-Var">
-      
       <!-- Logo section Start -->
       <div class="logo-sale-create-wraper">
         <div class="company-details">
           <img src="./Images/TSEWCT logo.jpg" class="Company-logo">
-          <div class="company-sub-content">
+          <div class="company-sub-content" onclick="businessDropDown()">
             <div class="company-name-tooltip-wrapper">
               <div class="company-name" >
-                The Safa Education Welfare & Charitable Trust.
+                The Safa Education Welfare & Charitable Trust (T.S.E.W.C.T).
               </div>
-              <div class="tooltip">The Safa Education Welfare & Charitable Trust.</div>
+              <div class="tooltip">The Safa Education Welfare & Charitable Trust (T.S.E.W.C.T).</div>
                <div class="company-number">6304253940</div>
             </div>
           </div>
@@ -31,7 +30,19 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7897 3.42769C14.3281 0.20314 9.67273 0.203138 9.21113 3.42769C9.12308 4.04272 8.40838 4.33875 7.91124 3.96612C5.30473 2.01242 2.01291 5.30424 3.96661 7.91075C4.33924 8.40789 4.0432 9.12259 3.42818 9.21064C0.203629 9.67224 0.203627 14.3276 3.42818 14.7892C4.0432 14.8772 4.33924 15.5919 3.96661 16.0891C2.01291 18.6956 5.30473 21.9874 7.91124 20.0337C8.40838 19.6611 9.12308 19.9571 9.21113 20.5721C9.67273 23.7967 14.3281 23.7967 14.7897 20.5721C14.8777 19.9571 15.5924 19.6611 16.0896 20.0337C18.6961 21.9874 21.9879 18.6956 20.0342 16.0891C19.6616 15.5919 19.9576 14.8772 20.5726 14.7892C23.7972 14.3276 23.7972 9.67224 20.5726 9.21064C19.9576 9.12259 19.6616 8.40789 20.0342 7.91075C21.9879 5.30424 18.6961 2.01243 16.0896 3.96612C15.5924 4.33875 14.8777 4.04272 14.7897 3.42769ZM11.1909 3.71111C11.3249 2.77533 12.6759 2.77533 12.8099 3.71111C13.1132 5.8304 15.576 6.85051 17.2891 5.56647C18.0455 4.9995 19.0008 5.9548 18.4338 6.71121C17.1498 8.4243 18.1699 10.8871 20.2892 11.1905C21.225 11.3244 21.225 12.6754 20.2892 12.8094C18.1699 13.1127 17.1498 15.5755 18.4338 17.2886C19.0008 18.045 18.0455 19.0003 17.2891 18.4333C15.576 17.1493 13.1132 18.1694 12.8099 20.2887C12.6759 21.2245 11.3249 21.2245 11.1909 20.2887C10.8876 18.1694 8.42479 17.1493 6.7117 18.4333C5.95529 19.0003 4.99999 18.045 5.56696 17.2886C6.851 15.5755 5.83088 13.1127 3.7116 12.8094C2.77582 12.6754 2.77582 11.3244 3.7116 11.1905C5.83088 10.8871 6.851 8.4243 5.56696 6.71121C4.99999 5.9548 5.95528 4.9995 6.7117 5.56647C8.42479 6.85051 10.8876 5.8304 11.1909 3.71111ZM10 11.9999C10 10.8954 10.8954 9.99994 12 9.99994C13.1046 9.99994 14 10.8954 14 11.9999C14 13.1045 13.1046 13.9999 12 13.9999C10.8954 13.9999 10 13.1045 10 11.9999ZM12 7.99994C9.79086 7.99994 8 9.7908 8 11.9999C8 14.2091 9.79086 15.9999 12 15.9999C14.2091 15.9999 16 14.2091 16 11.9999C16 9.7908 14.2091 7.99994 12 7.99994Z" fill="#F0F1F3"></path>
 </svg>
           </div>
-        </div>  
+        </div> 
+        <!-- Switch Business Section Start -->
+       <div class="switch-business" id="switch-business-id">
+        <h4>Switch Business</h4>
+        <div class="switch-business-option">
+          <div><label for="Business1">The Safa Education Welfare & Charitable Trust (T.S.E.W.C.T).<input name="Business" id="Business1" type="radio"></input></div>
+          <div><label for="Business2">Safa Care Foundation (S.C.F).<input name="Business" id="Business2" type="radio"></input></div>
+          <div><label for="Business3">Safa Baitul Mall Religious & Welfare Trust (S.B.M.R.W.T).<input name="Business" id="Business3" type="radio"></input></div>
+          <div><label for="Business4">Safa Traders (S.T).<input name="Business" id="Business4" type="radio"></input></div>
+        </div>
+        <button>+ Create New Business</button>
+       </div>
+        <!-- Switch Business Section End --> 
         <div class="create-sale-dropdown hover" id="Sales-dropdown">
           <div class="icons-wraper">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
