@@ -23,7 +23,7 @@ main{
 }   
 #app-left-Var{  
 flex-basis: 17.5%;
-height: 98vh;
+height: 97vh;
 display: flex;
 flex-direction: column;
 background-color:var(--nav-left-background);
@@ -34,6 +34,7 @@ font-size: 1.4rem;
     padding-bottom: 1.2rem;
     flex-shrink: 0;
     padding: 0.8rem 1.2rem;
+    position: relative;
 }
 .company-details{   
     display: flex;
@@ -159,14 +160,16 @@ font-size: 1.4rem;
     visibility:visible;
 }
 .menu-list{
-    overflow-y: auto;
-    flex-grow: 1;
+    overflow-y: scroll;
+    height: 100vh;
     scrollbar-width: thin;
-    scrollbar-color: #888 var(--nav-left-background);
-    scrollbar-arrow-color: var(--nav-left-background);
+    scrollbar-color: #888 transparent;
+}
+.menu-list::-webkit-scrollbar-button {
+  display: none; /* Removes up/down arrows */
 }
 .general,.Accounting-Solutions,.business-tool,.footer{
-    padding: 0.8rem 0.5rem 0rem 1.2rem;
+    padding: 0.4rem 0.5rem 0rem 1.2rem;
 }
 .general h3,.Accounting-Solutions h3,.business-tool h3{
     font-size: 1rem;
@@ -223,4 +226,52 @@ font-size: 1.4rem;
 .business-tool{
     padding-bottom: 1rem;
 }
-
+.switch-business{
+    background-color: #ffffff;
+    padding: 0.8rem;
+    border-radius:0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+    position: absolute;
+    max-width: 21.5rem;
+}
+.switch-business h4{
+    font-size: 1.2rem;
+    color: #667085;
+    padding: 0.2rem;
+}
+.switch-business-option{
+    font-size: 1.4rem;
+    color: #292d35;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 0.9rem;
+    max-height: 25rem;
+    overflow-y: auto;
+    line-height: 1.5;
+    scrollbar-width: thin;
+}
+.switch-business-option label{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border: 0.1rem solid #e0e2e7;
+    padding:0.4rem 0.8rem;
+    border-radius: 0.8rem;
+    margin-block:0.4rem ;
+     cursor: pointer;
+}
+.switch-business button{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    padding: 1rem;
+    cursor: pointer;
+    color: #0c8ce9;
+    font-size: 1.4rem;
+    background-color:#ffffff;
+}
+.business-active{
+    display: block;
+    z-index: 10;
+}
