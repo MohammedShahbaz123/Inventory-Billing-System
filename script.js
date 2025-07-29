@@ -12,5 +12,5 @@ function noHover(){
 }
 function businessDropDown(){
     const switchBusinessOption=document.getElementById('switch-business-id')
-    switchBusinessOption.classList.toggle('business-active');
+    switchBusinessOption.classList.toggle('business-drop-down-active');
 }
