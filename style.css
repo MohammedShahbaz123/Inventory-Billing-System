@@ -251,7 +251,7 @@ font-size: 1.4rem;
     line-height: 1.5;
     scrollbar-width: thin;
 }
-.switch-business-option label,.Business-active{
+.business-option,.Business-active{
     display: flex;
     justify-content: space-between;
     gap: 0.8rem;
@@ -259,7 +259,7 @@ font-size: 1.4rem;
     padding:0.4rem 0.8rem;
     border-radius: 0.8rem;
     margin-block:0.4rem ;
-     cursor: pointer;
+    cursor: pointer;
 }
 .switch-business button{
     display: flex;
