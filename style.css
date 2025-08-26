@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Source Sans Pro', sans-serif;
     scroll-behavior:smooth;
     border: none;
     border: 0;
@@ -12,6 +12,9 @@
     --nav-left-background:#0c1526;
     --nav-left-border:#e0e2e7;
     --nav-left-footer:#1d2646;
+    --tooltip-color:#ffffff;
+    --tooltip-background-color:#28313b;
+    --tooltip-border-radius:0.4rem;
 }
 html{
     font-size: 62.5%;
@@ -20,6 +23,7 @@ main{
     padding: 0.8rem;
     display: flex;
     color: #f0f1f3;
+    background-color: #f0f1f3;
 }   
 #app-left-Var{  
 flex-basis: 17.5%;
@@ -82,12 +86,12 @@ font-size: 1.4rem;
     position: absolute;
     top: 50%;
     left: 142%;
-    background-color:#2c2e33;
-    color: #f0f1f3;
+    background-color:var(--tooltip-background-color);
+    color: var(--tooltip-color);
     z-index: 1;
     transform: translateY(-50%);
     transition: opacity 0.3s;
-    border-radius: 0.4rem;
+    border-radius: var(--tooltip-border-radius);
 }
 .tooltip::before{
     content: '';
@@ -98,7 +102,7 @@ font-size: 1.4rem;
     border-style: solid;
     transform: translateY(-50%);
     border-color: transparent #2c2e33 transparent transparent;
-    border: 0.6rem solid transparent #2c2e33 transparent transparent ;
+    /* border: 0.6rem solid transparent #2c2e33 transparent transparent ; */
 }
 .company-details:hover .tooltip{
     visibility: visible;
@@ -123,7 +127,7 @@ font-size: 1.4rem;
 .create-sale-dropdown svg{
     margin-right: 0.8rem;
 }
-.create-sale-dropdown p{
+.create-sale-dropdown span{
     font-size: 1.2rem;
 }
 .create-sale-dropdown .d-a{
@@ -133,7 +137,7 @@ font-size: 1.4rem;
     color: #212529;
 }
 .create-sale-dropdown .fa-angle-down{
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 0.9rem 0.7rem 1rem;
     font-size: 1.6rem;
     color: #212529;
 }
@@ -278,3 +282,361 @@ font-size: 1.4rem;
 .Business-active{
     border: 0.1rem solid #4c3cce !important;  
 }
+
+/* Left Side Content */
+.left-side-content{
+    flex: 1;    
+    border: 0.1rem solid #e0e2e7;
+    background: #ffffff;
+    box-shadow: 0 0.1rem 0.2rem #1018280f, 0 0.1rem 0.3rem #1018281a;
+    border-radius: 0.8rem;
+    margin-left: 0.8rem;
+}
+.dashboard-header{
+    padding: 0 1.4rem;
+    border-radius: 0.8rem;
+    border-bottom: 0.1rem solid #e9ecf1;
+    background-color: #fff;
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    color: #212529;
+}
+.dashboard-header h3{
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+.dashboard-header p{
+    background-color: #f3f8ff;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+.dashboard-header .refresh{
+    color: #488dff;
+    cursor: pointer;
+}
+.dashboard-header .fa-rotate{
+    font-size: 0.9rem;
+    padding-right: 0.5rem;
+}
+.dashboard-header .space{
+    padding-right: 1.3rem;
+}
+.dashboard-header .fa-keyboard{
+    font-size: 1.8rem;
+    color: #676768;
+}
+.keyboard-wrapper{
+    position: relative;
+    display: inline-block;
+     cursor: pointer;
+}
+.keyboard-tooltip{
+    position: absolute;
+    background-color: var(--tooltip-background-color);
+    color: var(--tooltip-color);
+    border-radius: var(--tooltip-border-radius);
+    font-size: 1.2rem;
+    padding:1rem 4rem 1rem 0.6rem;
+    white-space: nowrap;
+    top: 140%;  
+    left: 50%;
+    transform: translateX(-46%);
+    visibility: hidden;
+}
+.keyboard-tooltip::before{
+    content: "";
+    position: absolute;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: transparent transparent #28313b transparent ;
+    top: -50%;
+    left: 42.5%;
+}
+.keyboard-wrapper:hover .keyboard-tooltip {
+    visibility: visible;
+}
+.keyboard-tooltip span{
+    background-color:var(--tooltip-color) ;
+    color: var(--tooltip-background-color);
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+}
+.dashboard-header button{
+    padding:0.8rem;
+    background-color: var(--tooltip-color);
+    border: 0.1rem solid var(--nav-left-border);
+    border-radius: var(--tooltip-border-radius);
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    color: #525a6a;
+}
+.dashboard-header button #gift-icon{
+    width: 3rem;
+    height: 3.5rem;
+    object-fit: cover;
+    transform: translateY(100%);
+    animation: slideUp 5s infinite;
+    margin-bottom: 0.8rem;
+}   
+.dashboard-header .btn-hover:hover{
+    border-color: #6610f2;
+}
+@keyframes slideUp{
+    0%{
+        transform:translateY(100%);
+    }
+    10%{
+        transform:translateY(0);
+    }
+    60%,100%{
+        transform: translateY(0);
+    }
+}
+.dashboard-header .fs{
+    font-size: 1.2rem;
+}
+.dashboard-header .ms{
+    margin: -0.2rem 0.8rem 0 0;
+    width: 1.5rem;
+    height: 1.4rem;
+}
+.dashboard-header .share-btn{
+   padding-inline:2.5rem ;
+}
+.dashboard-header .share-btn:hover{
+    background-color: #f8f9fa;
+}
+.dashboard-header .chat-btn{
+    color: #488dff!important;
+    background-color: #488dff33!important;
+}
+.ms-1{
+    margin-right: 0.4rem;
+}
+.fa-display{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.Download-btn{
+    background-color: #28383b !important;
+    color: #ffffff !important;
+    padding-inline: 2.8rem !important;
+    height: 3.2rem !important;
+}
+.Download-btn:hover{
+    background-color: #485563 !important;
+}
+.dashboard-content{
+    padding: 1.6rem 1.6rem 0rem 1.6rem;
+    font-size: 1.6rem;
+    overflow-y: scroll;
+    height: 88vh;
+}
+.p-c-grid{
+    display: grid;  
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.collect-wrapper i, .pay-wrapper i{
+    font-size: 1.4rem;
+    padding-right: 1.8rem;
+}
+.card{
+    padding: 1.12rem 1.44rem;
+    background-color: #ffffff;
+    border: 0.1rem solid rgba(0, 0, 0, .125);
+    border-radius: 0.45rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow:0rem 0.1rem 0.2rem #00000026;
+    background-clip: border-box;
+}
+.to-collect:hover,.to-pay:hover,.cash-bank:hover{
+    filter: drop-shadow(0rem 0.4rem 0.7rem rgba(76, 60, 206, .3));
+}
+.to-collect{
+    color: #2cc646;
+}
+.to-pay{
+    color: #d01717;
+}
+.rupees{
+    color: #000000;
+    font-weight: 700;
+}
+.t-c-grid{
+    display: grid;
+    grid-template-columns: 1.27fr 0.73fr;
+    gap: 1.6rem;
+}
+.transaction{ 
+    border: 0.1rem solid rgba(0, 0, 0, .125);
+    border-radius: 0.45rem;
+    cursor: pointer;
+    margin: 1.6rem 1.6rem 1.6rem 0rem;
+    width: 100%;
+}
+.t-header{
+    padding: 1.12rem;
+    color: #687e96;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, .125);
+    font-weight: 600;
+}
+.transaction table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.transaction table thead tr th{
+    padding: 1rem 1.2rem;
+    color: #76797c;
+    font-size: 1.2rem;
+    text-transform:uppercase;
+    font-weight: normal;
+    vertical-align: bottom;
+    background-color: #f7f7f7;
+}
+.transaction table td{
+    padding: 1rem 1.2rem;
+    font-size: 1.4rem;
+    color: #28313b;
+}
+.transaction table tr:hover,.see-all-transaction:hover{
+    background: linear-gradient(0deg, rgba(76, 60, 206, .1), rgba(76, 60, 206, .1)), #ffffff;
+}
+.transaction table tr{
+     border-bottom: 0.1rem solid rgba(0, 0, 0, .125);
+}
+.see-all-transaction{
+    font-size: 1.4rem;
+    color: #488dff;
+    padding: 1rem 1.2rem;
+    text-align: center;
+}
+.cash-bank{
+    color: #687e96;   
+    width: 100%;
+     margin: 1.6rem 1.6rem 1.6rem 0rem;
+}
+.cash-bank img{
+    margin-right: 1.5rem;
+    align-self: center;
+}
+.sale-report-chart {
+  max-height: 50rem;   /* fixed height */
+  width: 48%;
+  display: block;
+  border: 0.1rem solid rgba(0, 0, 0, .125);
+  border-radius: 0.45rem;
+}
+.sale-report-chart h4{
+    color: #9da7b7;
+    font-weight: normal;
+    padding: 1.12rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, .125);
+    cursor: pointer;
+}
+.sale-report-chart h4:hover{
+    text-decoration: underline;
+}
+.sale-report-chart h4 span{
+    font-size: 1.4rem;
+    color: #28313b;
+    font-weight:600;
+}
+.saleChart-value{
+    display: flex;
+    justify-content: space-between;
+    height: 30rem;
+}
+.sale-report-chart canvas {
+  width: 70% !important;
+  height: 100% !important;
+}
+.dayWise{
+    margin-right: 1.6rem;
+}
+.custom-select {
+  position: relative;
+  width: 13rem;
+  margin-block: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.select-selected {
+  border: 0.1rem solid rgba(0, 0, 0, .125);
+  border-radius: 0.45rem;
+  padding: 1rem;
+  color: #28313b;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Arrow */
+.select-selected::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid #28313b;
+  border-width: 0 0.15rem 0.15rem 0;
+  padding: 0.4rem;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Dropdown items */
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, .125);
+  border-radius: 0.45rem;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+  margin-top: 0.2rem;
+}
+
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+  color: #28313b;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, .125);
+}
+.selected-item{
+    background: linear-gradient(0deg, rgba(76, 60, 206, .1), rgba(76, 60, 206, .1)), #ffffff;
+    font-weight: 600;
+}
+.select-items div:hover {
+  background: linear-gradient(0deg, rgba(76, 60, 206, .1), rgba(76, 60, 206, .1)), #ffffff; /* hover background */
+  text-decoration: underline;
+}
+
+/* Hide dropdown by default */
+.select-hide {
+  display: none;
+}
+.valueHeader{
+ font-size: 1.2rem;
+ color: #9da7b7;
+ margin-top: 1.6rem;
+ text-align: right;
+ line-height: 1.5;
+}
+.valueHeader .value{
+    font-size: 2rem;
+    color: #212529;
+}
+

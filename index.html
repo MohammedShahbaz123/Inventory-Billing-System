@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mybillbook.in/app/dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap">
   <!-- Font Awesome icons link  -->
    <script src="https://kit.fontawesome.com/6346891d99.js" crossorigin="anonymous"></script>
 </head>
@@ -48,7 +50,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#292D35"></path>
 </svg>
-            <p>Create Sales Invoice</p>
+            <span>Create Sales Invoice</span>
           </div>
           <i class="fa-solid fa-angle-down d-a" id="drop-arrow"></i>
       </div>
@@ -149,7 +151,85 @@
       </div>
      <!-- Footer Section End -->
     </div>
-    <div class="content-body"></div>
+    <!-- Dashboard Start -->
+    <div class="left-side-content">
+      <div class="dashboard-header">
+        <h3>Dashboard</h3>
+        <p>Last Update: <span class="space today-date">04-Aug-2025 |<span class="update-time"> 09:21 PM</span> </Span> <Span class="refresh"><i class="fa-solid fa-rotate"></i> Refresh</span></p>
+        <div class="keyboard-wrapper">
+        <i class="fa-solid fa-keyboard"></i>
+        <div class="keyboard-tooltip">Press <span>Alt</span> to open or close the shortcut panel</div>
+      </div>
+        <button class="btn-hover"><img width="25px" height="20px" style="padding: 0 2px;" src="https://mybillbook.in/app//assets/icons/loudspeaker-icon.svg" class="ng-star-inserted"></button>
+        <button class="btn-hover"><img src="./Images/gift-icon.gif" id="gift-icon" alt="">Refer Now</button>
+        <button class="share-btn fs"><img _ngcontent-ng-c968219129="" class="ms" src="https://mybillbook.in/app//assets/images/community-icon-grey.svg">Share Suggestion</button>
+        <button class="chat-btn fs"><img _ngcontent-ng-c4081115822="" class="ms-1" src="https://mybillbook.in/app//assets/icons/chat-icon.svg">Chat Support</button>
+        <button class="Download-btn fs"><i class="fa-solid fa-display"></i>Download Desktop App</button>
+      </div>
+      <div class="dashboard-content">
+        <div class="p-c-grid">
+        <div class="card to-collect"><div class="collect-wrapper"><i class="fa-solid fa-arrow-down"></i>To Collect</div><span class="rupees">₹0</span></div>
+        <div class="card to-pay"><div class="pay-wrapper"><i class="fa-solid fa-arrow-up"></i>To Pay</div><span class="rupees">₹0</span></div>
+        </div>
+        <div class="t-c-grid">
+        <div class="transaction">
+          <div class="t-header">Latest Transactions</div>
+          <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Txn No</th>
+          <th>Party Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>14 Aug 2025</td>
+          <td>Sales Invoice</td>
+          <td>25-26/3</td>
+          <td>Cash Sale</td>
+          <td>₹450</td>
+        </tr>
+        <tr>
+          <td>14 Aug 2025</td>
+          <td>Sales Invoice</td>
+          <td>25-26/3</td>
+          <td>Online Sale</td>
+          <td>₹200</td>
+        </tr>
+        <tr>
+          <td>14 Aug 2025</td>
+          <td>Sales Invoice</td>
+          <td>25-26/3</td>
+          <td>Cash Sale</td>
+          <td>₹10</td>
+        </tr>
+        <tr>
+          <td>14 Aug 2025</td>
+          <td>Purchase Return</td>
+          <td>25-26/2</td>
+          <td>Jalpally Godown</td>
+          <td>₹810</td>
+        </tr>
+        <tr>
+          <td>14 Aug 2025</td>
+          <td>Sales Invoice</td>
+          <td>25-26/1</td>
+          <td>Cash Sale</td>
+          <td>₹150</td>
+        </tr>
+      </tbody>
+    </table>
+          <div class="see-all-transaction">See All Transactions</div>
+        </div>
+        <div class="card cash-bank"><div><img _ngcontent-ng-c968219129="" height="17" width="17" src="https://mybillbook.in/app//assets/images/cashbank.svg">Total Cash + Bank balance</div><span class="rupees">₹85,67,017.61</span></div>
+        </div>
+        <div class="sale-report-chart">
+  
+      </div>
+    <!-- Dashboard End -->  
   </main>
   <script src="script.js"></script>
 </body>
