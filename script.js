@@ -251,3 +251,17 @@ function selectDay(){
   });
 }
 
+// Inactive & Active Business
+document.querySelectorAll(".menu-list li").forEach(item => {
+      item.addEventListener("click", function(){
+
+        // Reset all items (only one active at a time)
+        document.querySelectorAll(".menu-list li").forEach(el => {
+          el.setAttribute("data-active", "false");
+          el.classList.remove('active-onclick');
+        });
+
+        item.setAttribute("data-active", "true");
+        item.classList.add('active-onclick');
+      });
+    });

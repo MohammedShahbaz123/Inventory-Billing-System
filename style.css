@@ -169,6 +169,12 @@ font-size: 1.4rem;
     scrollbar-width: thin;
     scrollbar-color: #888 transparent;
 }
+.menu-list li[data-active="true"] .inactive { display: none; }
+.menu-list li[data-active="true"] .active { display: inline; }
+
+.menu-list li[data-active="false"] .inactive { display: inline; }
+.menu-list li[data-active="false"] .active { display: none; }
+
 .menu-list::-webkit-scrollbar-button {
   display: none; /* Removes up/down arrows */
 }
@@ -181,9 +187,9 @@ font-size: 1.4rem;
     font-family: 'Poppins';
     padding: 0.8rem 0rem;
 }
-.general ul .active{
+.active-onclick[data-active="true"]{
     background-color: #2b386a;
-    color: #e0e2e7;
+    color: #e0e2e7 !important;
     border-radius: 3.5rem;
 }
 .general li,.Accounting-Solutions li,.business-tool li,.footer li{
@@ -198,6 +204,9 @@ font-size: 1.4rem;
     border-radius: 3.5rem;
     cursor: pointer;
 }   
+.menu-list li[data-active="true"]:hover{
+    background-color: #2b386a;
+}
 .general li i,.Accounting-Solutions li i{
     margin-right: 1rem;
 }
